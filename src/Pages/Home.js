@@ -6,7 +6,7 @@ import './Home.css';
 export default function Home() {
     const [dailyGainer, setDailyGainer] = useState([]);
     const [dailyLoser, setDailyLoser] = useState([]);
-    const [gainerOn, setGainerOn] = useState(false);
+    const [gainerOn, setGainerOn] = useState(true);
     const gainerUrl = 'https://financialmodelingprep.com/api/v3/gainers?apikey=a57a32f81dce767cfc8cdf7b8ab4cd39';
     const loserUrl =  'https://financialmodelingprep.com/api/v3/losers?apikey=a57a32f81dce767cfc8cdf7b8ab4cd39';
 
