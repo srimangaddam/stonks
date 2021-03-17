@@ -21,7 +21,7 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/stock">Stock</Link>
+              <Link to="/stock" class="stock">Stock</Link>
             </li>
             <li>
               <Link to="/compare">Compare</Link>
