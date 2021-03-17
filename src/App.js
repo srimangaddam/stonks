@@ -16,7 +16,7 @@ export default function App() {
     <Router>
       <div>
         <nav>
-          <ul>
+          <ul class="tags">
             <li>
               <Link to="/">Home</Link>
             </li>

@@ -24,7 +24,7 @@
   color: white;
 }
 
-li {
+.tags li {
   float: left;
   text-align: center;
   display: block;

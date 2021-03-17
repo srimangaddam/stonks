@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Marquee from 'react-fast-marquee';
 import './Home.css';
 
 export default function Home() {
@@ -25,14 +24,20 @@ export default function Home() {
         return (
         <div class="gainOn">
         
-        <Marquee >
+        <ul class="marquee">
             {dailyGainer.map((item) => (
-                <li key={item.id} class="gains">
-                    {item.ticker}      {item.changesPercentage}
-                </li>
-
+                <ul key={item.id} class="gains">
+                    {item.ticker}{item.changesPercentage}
+                </ul>
             ))}
-        </Marquee>
+            {dailyLoser.map((item) => (
+                        <ul key={item.id} class="losses">
+                            {item.ticker}{item.changesPercentage}
+                        </ul>
+            
+                    ))}
+        </ul>
+        
     </div>
         );
 }
@@ -40,36 +45,19 @@ export default function Home() {
             return (
                 <div>
                 
-                <Marquee >
+                <ul class="marquee">
                     {dailyLoser.map((item) => (
-                        <li key={item.id} class="losses">
-                            {item.ticker}  {item.changesPercentage}
-                        </li>
+                        <ul key={item.id} class="losses">
+                            {item.ticker}{item.changesPercentage}
+                        </ul>
             
                     ))}
-                </Marquee>
+                </ul>
             </div>
                 );
             };
             
         }
-
-
-const showLoser = () => {
-    return (
-    <div>
-    
-    <ul class="losers" >
-        {dailyLoser.map((item) => (
-            <li key={item.id}>
-                {item.ticker}  {item.changesPercentage}
-            </li>
-
-        ))}
-    </ul>
-</div>
-    );
-};
 
         
     return (
