@@ -1,25 +1,77 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import home from './Pages/Home'
+import stock from './Pages/Stock'
+import compare from './Pages/Compare'
+import categories from './Pages/Categories'
+import popular from './Pages/Popular'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/stock">Stock</Link>
+            </li>
+            <li>
+              <Link to="/compare">Compare</Link>
+            </li>
+            <li>
+              <Link to="/categories">Categories</Link>
+            </li>
+            <li>
+              <Link to="/popular">Popular Investors</Link>
+            </li>
+            
+          </ul>
+        </nav>
+        <Switch>
+        
+          <Route path="/stock">
+            <Stock />
+          </Route>
+          <Route path="/compare">
+            <Compare />
+          </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
+          <Route path="/popular">
+            <Popular />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+function Home() {
+  return home()
+}
+
+function Stock() {
+  return stock()
+}
+
+function Compare() {
+  return compare()
+}
+function Categories() {
+  return categories()
+}
+function Popular() {
+  return popular()
+}
