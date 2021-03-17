@@ -1,0 +1,19 @@
+
+.gains {
+    text-align: center;
+    display: block;
+    padding: 0.5%;
+    width: 5.5%;
+    font-size: 80%;
+    color: green;
+  }
+
+.losses {
+    text-align: center;
+    display: block;
+    padding: 0.50%;
+    width: 5.5%;
+    font-size: 80%;
+    color: red;
+  
+  }
