@@ -1,9 +1,9 @@
-//import Search from '../Components/Search'
+import Search from '../Components/Search'
 export default function Stock() {
     return (
     <div>
-        <h2>Stock</h2>
-    
+        <h2>Search</h2>
+     <Search></Search>
 
     </div>
     )
