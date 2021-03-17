@@ -1,6 +1,6 @@
-export default function search() {
+export default function Search() {
     return (
     <div>
-        <h2>Watchlist</h2>
+        <h2>Search</h2>
     </div>)
 }

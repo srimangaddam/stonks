@@ -5,11 +5,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import home from './Pages/Home'
-import stock from './Pages/Stock'
-import compare from './Pages/Compare'
-import categories from './Pages/Categories'
-import popular from './Pages/Popular'
+import Home from './Pages/Home'
+import Stock from './Pages/Stock'
+import Compare from './Pages/Compare'
+import Categories from './Pages/Categories'
+import Popular from './Pages/Popular'
 
 export default function App() {
   return (
@@ -56,22 +56,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return home()
-}
-
-function Stock() {
-  return stock()
-}
-
-function Compare() {
-  return compare()
-}
-function Categories() {
-  return categories()
-}
-function Popular() {
-  return popular()
 }

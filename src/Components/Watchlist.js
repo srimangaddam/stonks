@@ -1,4 +1,4 @@
-export default function watchlist() {
+export default function Watchlist() {
     return (
     <div>
         <h2>Watchlist</h2>

@@ -1,4 +1,4 @@
-export default function compare() {
+export default function Compare() {
     return (
     <div>
         <h2>Compare</h2>
