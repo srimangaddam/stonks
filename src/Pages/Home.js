@@ -5,7 +5,6 @@ import './Home.css';
 export default function Home() {
     const [dailyGainer, setDailyGainer] = useState([]);
     const [dailyLoser, setDailyLoser] = useState([]);
-    const [gainerOn, setGainerOn] = useState(true);
     const gainerUrl = 'https://financialmodelingprep.com/api/v3/gainers?apikey=a57a32f81dce767cfc8cdf7b8ab4cd39';
     const loserUrl =  'https://financialmodelingprep.com/api/v3/losers?apikey=a57a32f81dce767cfc8cdf7b8ab4cd39';
 
@@ -20,9 +19,8 @@ export default function Home() {
     },[]);
 
     const showGainLoss = () => {
-        if (gainerOn) {
         return (
-        <div class="gainOn">
+        <div>
         
         <ul class="marquee">
             {dailyGainer.map((item) => (
@@ -40,27 +38,12 @@ export default function Home() {
         
     </div>
         );
-}
-        else {
-            return (
-                <div>
-                
-                <ul class="marquee">
-                    {dailyLoser.map((item) => (
-                        <ul key={item.id} class="losses">
-                            {item.ticker}{item.changesPercentage}
-                        </ul>
-            
-                    ))}
-                </ul>
-            </div>
-                );
-            };
+
             
         }
 
         
     return (
        showGainLoss()
-    )
+    );
 }

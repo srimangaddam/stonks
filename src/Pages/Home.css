@@ -19,17 +19,7 @@
   100% { transform: translate(-100%, 0); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .marquee  {
-    animation-iteration-count: 1;
-    animation-duration: 0.1; 
-    /* instead of animation: none, so an animationend event is 
-     * still available, if previously attached.
-     */
-    width: auto;
-    padding-left: 0;
-  }
-}
+
 .gains {
     text-align: center;
     display: inline-block;
